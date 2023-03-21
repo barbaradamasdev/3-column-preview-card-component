@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* Primary Color */
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --darkCyan: hsl(179, 100%, 13%);
+
+    /* Neutral Color */
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --gray: hsl(0, 0%, 95%);  /* (background, headings, buttons) */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    background-color: var(--gray);
+}
+
+.content {
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: var(--gray);
+}
+
+p {
+    color: var(--paragraphs);
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+
+.one, .two, .three{
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    width: 305px;
+    height: 500px;
+}
+
+.one {
+    background-color: var(--orange);
+    border-radius: 10px 0 0 10px;
+}
+
+.two {
+    background-color: var(--cyan);
+}
+
+.three {
+    background-color: var(--darkCyan);
+    border-radius: 0 10px 10px 0;
+}
+
+button {
+    padding: 15px 0;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-right: 60px;
+    background-color: var(--gray);
+    mix-blend-mode: screen; /* For transparency in text button */
+}
+
+button:hover {
+    border: 2px solid var(--paragraphs);
+    padding: 13px 0;
+    color: var(--paragraphs);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+img {
+    width: 70px;
+}
+
+@media (max-width: 925px) {
+    .content {
+        flex-direction: column;      
+        top: 250px;
+    }
+
+    .one {border-radius: 10px 10px 0 0;}
+    .three {border-radius: 0 0 10px 10px;}
+
+}
